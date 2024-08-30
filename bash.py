@@ -1,5 +1,9 @@
 def execute_commands(command):
-    pass
+    try:
+        subprocess.run(command.split())
+    except Exception:
+        print("psh: command not found: {}".format(command))
+
 
 def main():
     while True:
